@@ -109,7 +109,6 @@ export default function AdminOrdersPage() {
                         {order.order_items.map((item) => (
                           <li key={item.id} className="flex justify-between text-sm text-stone-700">
                             <span>
-                              {/* @ts-expect-error joined data */}
                               {item.sku?.product?.name ?? "Product"} ({item.sku?.label ?? ""}) × {item.quantity}
                             </span>
                             <span className="font-medium">{formatPrice(item.line_total)}</span>
